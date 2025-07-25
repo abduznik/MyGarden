@@ -1,7 +1,4 @@
 ![]( https://youtu.be/6s6DT1yN4dw?si=pFphzzIx5smJr6QG)
-```timestamp-url 
- https://youtu.be/6s6DT1yN4dw?si=pFphzzIx5smJr6QG
- ```
 # Quick Grabs
 
 ```bash
@@ -43,20 +40,11 @@ x Treat links as shortest path
  ```
 You can create a repo from zero or simply fork the existing quartz4 by pressing the button below
 
-```button
-name Link to Github
-type link
-action https://github.com/jackyzha0/quartz
-color default
-```
+[Github Quartz Site](https://github.com/jackyzha0/quartz)
 
 After you got to the site press on ***Fork*** or by pressing the button below
 
-```button
-name Fork Link
-type link
-action https://github.com/jackyzha0/quartz/fork
-```
+[Fork Site](https://github.com/jackyzha0/quartz/fork)
 
 After you forked it simply clone it using **GIT**
 ```bash
