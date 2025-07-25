@@ -22,10 +22,12 @@ This guide explains how to upload Steam artworks or screenshots as long images b
 
    - **For Artwork or Featured Artwork:**
 
-   ```javascript
+```javascript
 $J('#image_width').val(1000).attr('id',''),$J('#image_height').val(1).attr('id','');
-   ```
+```
+
 * For Screenshot:
+
 ```javascript
 $J('#image_width').val(1000).attr('id',''),$J('#image_height').val(1).attr('id',''),$J('[name=file_type]').val(5);
 ```
