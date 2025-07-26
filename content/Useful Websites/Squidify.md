@@ -8,3 +8,8 @@ You can view the website and use it easily, it seems to save data via "cookies".
 You can download the application here.
 credit to [victoralvesf](https://github.com/victoralvesf/) for contributing and creating this application using [TAURI](https://v2.tauri.app/)
 ![](aonsoku_example.jpg)
+
+# [Wotaku wiki](https://wotaku.wiki/guides/music/squidify)
+Here you can find all of the information you need about download a different client and how to set it up.
+
+![](wotaku_example.jpg)
