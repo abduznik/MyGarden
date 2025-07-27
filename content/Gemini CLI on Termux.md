@@ -15,9 +15,18 @@ pkg install nodejs
 ```
 4. finally, install Gemini CLI
 ```bash 
-pm install -g @google/gemini-cli
+npm install -g @google/gemini-cli
 ```
-Once you've finished you can easily open the CLI by writing in termux ```Gemini```
+Once you've finished you can easily open the CLI by writing in termux 
+```bash
+Gemini --debug
+```
+This way, you can enter the first time to Gemini in debug mode which will let you copy a login link to login into your Google account. you might also need to write 
+```bash
+/auth
+```
+to get the link, after that though, you wont be needing to do this again!
+
 ![[gemini_example.jpg]]
 # Commands used in this post:
 
@@ -35,6 +44,10 @@ pkg install nodejs
 
 ```bash
 npm install -g @google/gemini-cli
+```
+
+```bash
+gemini --debug
 ```
 
 ```bash
