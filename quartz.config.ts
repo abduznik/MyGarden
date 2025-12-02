@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Useless Wiki",
+    pageTitle: "Useless Wiki", // You can edit this title here
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -23,30 +23,30 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "IBM Plex Mono", // Monospace headers for a "Terminal" feel
+        body: "Inter",           // Clean, readable sans-serif for docs
+        code: "IBM Plex Mono",   // Standard code font
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
+          light: "#ffffff",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
+          darkgray: "#24292f", // GitHub Light text
+          dark: "#24292f",
+          secondary: "#0969da", // GitHub Light blue link
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
+          light: "#0d1117",      // GitHub Dark Dimmed / IDE background
+          lightgray: "#30363d",  // Borders
+          gray: "#8b949e",       // Metadata/Comments
+          darkgray: "#c9d1d9",   // Main Text
+          dark: "#f0f6fc",       // Headers
+          secondary: "#58a6ff",  // Bright Blue (Links/Accent)
+          tertiary: "#8b949e",
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#b3aa0288",
         },
