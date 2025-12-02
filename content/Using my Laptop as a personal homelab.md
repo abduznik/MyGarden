@@ -1,6 +1,6 @@
 ---
 created: 2025-11-30T23:20:13+02:00
-modified: 2025-12-02T06:57:35+02:00
+modified: 2025-12-02T07:00:03+02:00
 ---
 
 # Using my Laptop as a personal homelab
@@ -40,5 +40,11 @@ sudo apt-get update -qq && sudo apt-get upgrade -y -qq
 
 Once we've made sure all is updated we can do:
 ```bash
-sudo apt install tailscale
+sudo apt install tailscale -y
 ```
+
+Then, you need to connect the server to the services you can do it with 
+```bash
+sudo tailscale up
+```
+It will send you a link that you would need to enter on another device and login. Once you've done that you can use that same IP to connect to your homelab from anywhere in the world!
