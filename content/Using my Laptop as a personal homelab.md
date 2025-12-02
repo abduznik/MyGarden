@@ -1,6 +1,6 @@
 ---
 created: 2025-11-30T23:20:13+02:00
-modified: 2025-12-02T07:00:03+02:00
+modified: 2025-12-02T19:37:18+02:00
 ---
 
 # Using my Laptop as a personal homelab
@@ -48,3 +48,66 @@ Then, you need to connect the server to the services you can do it with
 sudo tailscale up
 ```
 It will send you a link that you would need to enter on another device and login. Once you've done that you can use that same IP to connect to your homelab from anywhere in the world!
+
+Now lets start by setting up Docker
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-
+rm get-docker.sh
+sudo usermod -aG docker $USER
+```
+after inputting all these commands you should be able to start Docker using:
+```bash
+sudo systemctl enable --now docker
+```
+
+After that all that's left is just installing all the containers you want! I personally reccomend the following ones:
+
+## Homarr - Dashboard for all your Docker container in one place!
+This is my goto first container I install. It's easier to manage other containers, see their statuses and also have an easy access to enter them and manage all of my containers.
+
+![Image](./90236277ea3db3847b6a9f579c4022e2.png) 
+One line command to install it:
+```bash
+mkdir -p $(pwd)/homarr/configs $(pwd)/homarr/icons && \
+docker run -d \
+  --name homarr \
+  --restart unless-stopped \
+  -p 7575:7575 \
+  -v $(pwd)/homarr/configs:/app/data/configs \
+  -v $(pwd)/homarr/icons:/app/public/icons \
+  ghcr.io/ajnart/homarr:latest
+```
+
+## Jellyfin - All in one Netflix replacement! Excellent for watching your saved shows and movies in one place from anywhere in the world!
+I personally don't enjoy paying for 100 different subscriptions to watch my favorite shows, however with Jellyfin I can experience a similar Netflix vibes and enjoy all of my shows/movies/animes in one place!
+
+![Image](./5b50613341a9b6622b766ffdf926a471.png) 
+One line command to install it:
+```bash
+mkdir -p $(pwd)/jellyfin/config $(pwd)/jellyfin/cache /home/$USER/media/movies /home/$USER/media/shows && \
+docker run -d \
+  --name jellyfin \
+  --restart unless-stopped \
+  -p 8096:8096 \
+  -v $(pwd)/jellyfin/config:/config \
+  -v $(pwd)/jellyfin/cache:/cache \
+  -v /home/$USER/media:/media \
+  jellyfin/jellyfin:latest
+```
+
+## Navidrome - Excellent and lightweight replacement for Spotify/YoutubeMusic! 
+This one is being used on a daily basis, all my music albums are saved locally and I can listen to them from anywhere!
+
+![Image](./5df8c488690b9cb8028d30db9bbf3774.jpg) 
+One line command to install it:
+```bash
+mkdir -p $(pwd)/navidrome/data /home/$USER/media/music && \
+docker run -d \
+  --name navidrome \
+  --restart unless-stopped \
+  -p 4533:4533 \
+  -v $(pwd)/navidrome/data:/data \
+  -v /home/$USER/media/music:/music:ro \
+  deluan/navidrome:latest
+```
