@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Useless Wiki", // You can edit this title here
+    pageTitle: "Niche Wiki", // You can edit this title here
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
